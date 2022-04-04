@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github</title>
+    
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- FAVICON :  사이트의 대표 아이콘. favorite icon -->
+    <link rel="icon" href="./favicon.png">
+    
+    <!-- bootstrap javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./main.css">
+
+    <!-- Google map link -->
+    <script>
+        // Initialize Google Map.
+        function initMap() {
+        // const를 이용해서 변수 생성
+          const myLatLng = {
+            lat: 37.782293,
+            lng: -122.391240
+          }
+        //    
+          const map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            scrollwheel: false,
+            zoom: 18
+          })
+          const marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'GitHub'
+          })
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+    
+
+</head>
+<body>
+    <!-- hero contents -->
+    <!-- section역시 header처럼 태그 자체 기능은 없으나, header와 구분하기 위해 씀 -->
+
+    <section class="hero">
+        <img class="globe" src="./images/hero-globe.jpg" alt="Globe">
+        <img class = "glow" src="./images/hero-glow.svg" alt="Glow">
+
+            <!-- 사이트를 삼등분 했을 때 맨 위에 위치한 부분을 header라고 한다-->
+    <!-- html의 header tag는 그 자체로 기능은 없지만, 코드 해독이 용이하도록 header를 만들 때는 header 태그를 쓴다 -->
+        <header>
+            
+            <div class="container d-flex align-items-center py-3">
+                <a class="logo me-2" href="#">
+                    <img src="./images/header-logo.svg" alt="Github logo">
+                </a>
+
+                <ul class="nav flex-grow-1">
+                    <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Product</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Enterprise</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link text-light">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light">Pricing</a>
+                    </li>
+                </ul>
+
+                <div class="forms d-flex align-items-center ">
+                    <!-- 버튼 투명도의 조절은 bootstrap에서 제공해 주지 않는다. 이건 css로 처리 -->
+                    <input type="text" class="form-control me-2" placeholder="Search Github">
+                    <button class="btn btn-link text-light text-decoration-none flex-shrink-0 me-2">Sign in</button>
+                    <button class="btn btn-outline-light flex-shrink-0">Sign up</button>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="container">
+
+            <!-- row와 col을 이용해서 그리드를 잡을때, row 태그 안에 col태그가 오는 규칙을 반드시 따라준다 -->
+            <div class="row">
+                <div class="col-7">
+                    <div class="headline">
+                        <h1 class="text-white">Where the world builds software</h1>
+                        <!-- text-white-50 bootstrap 클래스를 부여함으로써 50 만큼의 투명도를 갖게됌 -->
+                        <p class="text-white-50">Millions of developers and companies build, ship, and maintain their software on GitHub—the largest and most advanced development platform in the world.</p>
+        
+                    </div>
+                </div>`
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <form>
+                        <input type="text" class="form-control form-control-lg mb-2" placeholder="Email address">
+                        <input type="text" class="form-control form-control-lg mb-2" placeholder="Password">
+                        
+                        <!-- d-grid는 요소가 row나 col 안에서 최대한 늘어나게끔 해주는 bootstrap 클래스 -->
+                        <div class="d-grid">
+                            <button class='btn btn-primary btn-lg'>Sign up for Github</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <img class="curve" src="./images/curve.svg" alt="curve">
+    </section> 
+
+    <!-- Youtube -->
+    <section class = "youtube">
+         <div class="container">
+             <img class = "astronaut" src="./images/hero-astronaut.svg" alt="astronaut">   
+             <div class="ratio ratio-16x9">
+                <iframe width="424" height="238" src="https://www.youtube.com/embed/etMvd9IKPH4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+         </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features border-top border-bottom">  
+        <!-- bootstrap 의 border-top과 border-bottom 클래스로 섹션을 쉽게 구분할 수 있다 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/features-build.png" class="card-img-top" alt="build">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>For everything you build</strong></h5>
+                            <p class="card-body">Host and manage your code on GitHub. You can keep your work private or share it with the world.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/features-work.png" class="card-img-top" alt="Work">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>A better way to work</strong></h5>
+                            <p class="card-body">From hobbyists to professionals, GitHub helps developers simplify the way they build software.</p>                            
+                        </div>
+                      </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/features-projects.png" class="card-img-top" alt="Projects">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>Millions of projects</strong></h5>
+                            <p class="card-body">GitHub is home to millions of open source projects. Try one out or get inspired to create your own.</p>                            
+                        </div>
+                      </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./images/features-platform.png" class="card-img-top" alt="Platform">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>One platform, from start to finish</strong></h5>
+                            <p class="card-body">With hundreds of integrations, GitHub is flexible enough to be at the center of your development process.</p>                            
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h1>Where is GitHub?</h1>
+                    <p>GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.</p>
+                </div>
+                <div class="col-8">
+                    <!-- Google map API 이용 -->
+                    <div id="map" class="shadow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <img class="curve" src="./images/curve.svg" alt="Curve">
+        <div class="container">
+            <img class="illustration" src="./images/footer-illustration.webp" alt="Illustration">
+            <div class="row">
+                <div class="col-4">
+                    <img class="logo" src="./images/footer-logo.svg" alt="footer-logo">
+                </div>
+                <div class="col-2">
+                    <h5>Product</h5>
+                    <!-- 원래 ul 태그의 기본 스타일은 아래 li 요소들에 밑줄이 쳐지는 것이다 -->
+                    <!-- bootstrap의 list-unstyled 클래스는 이 기본 스타일을 없애준다. -->
+                    <ul class="list-unstyled">
+                      <li><a href="#">Features</a></li>
+                      <li><a href="#">Security</a></li>
+                      <li><a href="#">Team</a></li>
+                      <li><a href="#">Enterprise</a></li>
+                      <li><a href="#">Customer stories</a></li>
+                      <li><a href="#">The ReadME Project</a></li>
+                      <li><a href="#">Pricing</a></li>
+                      <li><a href="#">Resources</a></li>
+                      <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h5>Platform</h5>
+                    <ul class="list-unstyled">
+                    <li><a href="#">Developer API</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Atom</a></li>
+                    <li><a href="#">Electron</a></li>
+                    <li><a href="#">GitHub Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h5>Support</h5>
+                    <ul>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Community Forum</a></li>
+                    <li><a href="#">Professional Services</a></li>
+                    <li><a href="#">Learning Lab</a></li>
+                    <li><a href="#">Status</a></li>
+                    <li><a href="#">Contact GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <h5>Company</h5>
+                    <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">DI&B</a></li>
+                    <li><a href="#">Social Impact</a></li>
+                    <li><a href="#">Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="site-links list-unstyled">
+            <li>© 2021 GitHub, Inc.</li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Site Map</a></li>
+            <li><a href="#">What is Git?</a></li>
+          </ul>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* https://heropy.blog/css/images/logo.png */
+
+.container .item{
+
+    width : 200px;
+    height : 100px;
+    background-color : orange;
+    margin :10px;
+    background-image : url("https://heropy.blog/css/images/logo.png");
+    background-size : 80px;
+    background-repeat : no-repeat;   /* 바둑판식 배열이 기본값임. 이걸 no */
+    background-position : bottom right;
+    
+
+
+}

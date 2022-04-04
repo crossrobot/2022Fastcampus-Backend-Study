@@ -1,0 +1,23 @@
+.container .item{
+    color : yellowgreen; 
+    border : 2px solid black;
+    line-height: 2;
+    font-size: 30px;
+    font-style : italic;
+    text-align : center;
+}
+
+.container .item:nth-child(2){
+    font-weight : bold;
+    text-decoration : underline;
+
+}
+
+/* 
+접두사 font로 시작하는 속성들은 서체를 꾸며주는 속성
+text로 시작하는 속성들은 : 정렬, 줄, 넘침 등 일반적인 글자 
+앞에 text를 붙이기 조금 애매한 속성들은 color, line hight처럼 붙이진 않는데
+완벽하게 딱 떨어지게 구분되는 개념은 아님. 
+
+*/
+

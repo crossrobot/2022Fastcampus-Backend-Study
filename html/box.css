@@ -1,0 +1,26 @@
+
+
+.container .item{
+    width : 100px;
+    height : 100px;
+    background-color : tomato;
+    margin-bottom : 20px;
+    padding : 20px;
+    border : 4px solid blue; 
+    /* dashed : 점선, solid : 그냥 실선, dotted :   점선*/
+    box-sizing: border-box;
+    /* 외부 여백과 내부 여백 때문에 사이즈가 커지는 것을 방지하고 싶다면
+    box sizing 이라는 속성에서  border-box 을 통해 방지할 수 있다.  */
+    /* box sizing : border box는 여백에 상관없이 요소의 크기를 무저건
+    내가 앞에서 설정한 width 와 height 값을 유지해줌 */
+}
+
+.container .item:nth-child(2) {
+    box-shadow : 10px 20px rgba(0,0,0,.3); 
+}
+
+.item:nth-child(3){
+    opacity : 0; 
+}
+
+/* opacity는 투명도 */

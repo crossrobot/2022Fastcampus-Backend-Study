@@ -1,0 +1,32 @@
+.container .item{
+    width : 100px ; 
+    height : 100px ;
+    background-color : royalblue;
+    margin :30px;
+    padding : 10px;
+    border-radius : 10px;
+
+    /* transition : 전환효과.  */
+    transition :1s;
+}
+
+/* 첫번째 child에 마우스를 올려 놓았을 때  */
+.container .item:nth-child(1):hover{
+    width : 200px;
+    background-color: orange;
+}
+
+/* transform : 변환효과  */
+.container .item:nth-child(2){
+    transform : rotate(45deg) scale(0.5);
+    /* deg는 degree의 약자  */
+
+}
+
+
+.container .item:nth-child(3){
+    /* rotateX는 X축을 기준으로 3차원 변환  */
+    /* perspective는 rotate같은 다른 변환 함수들보다 먼저 써줘야 함 */
+    /* perspective에는 원근 거리를 의미한다*/
+    transform : perspective(300px) rotateX(45deg);
+}

@@ -1,0 +1,28 @@
+.container { 
+    background-color: orange;
+    /* 플렉스 기술  : 수평정렬. */
+    display : flex;
+    justify-content : center;
+
+    /* justify-content 는 start, end, center 세가지 정렬이 있음 */
+
+
+}
+
+.container .item {
+    width : 100px;
+    height : 100px;
+    background-color : royalblue;
+    border : 2px solid black;
+    box-sizing : border-box;
+    /* 글자 정렬 text align 만으로는 세로 높이에 대해서 가운데 정렬은 좀 어려움. 플렉스 기술을 이용해야 함 */
+    text-align: center;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    /* justify-content는 수평 방향 정렬을 컨트롤 */
+    /* align-items은 수직방향 정렬을 컨트롤  */
+    
+
+/* display : flex는 수평, 수직 정렬을 할 수 있는 1차원 레이아웃 기술 */
+}
