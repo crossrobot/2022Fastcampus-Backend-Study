@@ -5,10 +5,10 @@ from Messenger_listwidget버전 import Ui_MainWindow
 
 
 class MainWindow(QMainWindow) : 
-    def __init__(self) : 
-        super().__init__()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+    def __init__(self) :  
+        super().__init__() 
+        self.ui = Ui_MainWindow() 
+        self.ui.setupUi(self) 
         self.ui.btn_send.clicked.connect(self.click)
 
         ## 채팅창에서 엔터를 누를 때 전송되는 기능  
